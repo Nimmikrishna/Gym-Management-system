@@ -1,0 +1,14 @@
+<br>
+<br>
+<a class="go_home_link" href="/user">Go to Home Page</a><br>
+<br>
+<h1>Gym Reviews</h1>
+<br>
+<div class="detailscont cls-detail">
+    {{#each reviews}}
+      <p>Username: {{this.username}}</p>
+      <p>{{this.reviewText}}</p>
+      <p>Rating: {{this.rating}}</p>
+    {{/each}}
+</div>
+ 

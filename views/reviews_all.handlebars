@@ -1,0 +1,31 @@
+<br>
+<br>
+<br>
+<a class="go_home_link" href="/user/protectedUserHomePage">Back to User Home Page</a><br>
+<br>
+<a href="/myReviews/add">Add Gym Review</a>
+{{#if reviews}}
+
+  {{#each reviews}}
+  <div class="detailscont cls-detail">
+    <div class="myReviews">
+      {{#if this.branchName}}
+        <p>Branch Name: {{this.branchName}}</p>
+      {{/if}}
+      {{#if this.className}}
+        <p>Class Name: {{this.className}}</p>
+      {{else}}
+        <p>Rating: {{this.rating}}</p>
+      {{/if}}
+      <p>{{this.reviewText}}</p>
+      <a href="/myReviews/update/{{this._id}}">Edit</a>
+      {{!-- <form action="/myReviews/delete/{{this._id}}" method="POST">
+        <button type="submit">Delete</button>
+      </form> --}}
+    </div>
+    </div>
+  {{/each}}
+  
+{{else}}
+  <p>No reviews found</p>
+{{/if}}

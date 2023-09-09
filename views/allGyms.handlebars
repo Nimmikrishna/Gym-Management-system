@@ -1,0 +1,60 @@
+<br><br>
+<a class="go_home_link" href="/admin/adminhome">Home Page</a><br>
+<div class="  gyms gym-detail ">
+    {{#each gyms}}
+
+    <div class=" form-cont">
+    <h2 class="gym-name">
+        {{  this.branchName  }}
+    </h2>
+
+        <p>
+            Website: 
+            <a href="">
+                {{  this.website    }}
+            </a>
+        </p>
+        <p>
+            Address: <br>
+            
+            {{#if this.address.streetName.length}}
+                {{  this.address.streetName  }}<br>
+            {{else}}
+                "N/A"
+            {{/if}}
+            {{#if this.address.city.length}}
+                {{  this.address.city  }}<br>
+            {{else}}
+                "N/A"
+            {{/if}}
+            {{#if this.address.state.length}}
+                {{  this.address.state  }}<br>
+            {{else}}
+                "N/A"
+            {{/if}}
+            {{#if this.address.zip.length}}
+                {{  this.address.zip  }}<br>
+            {{else}}
+                "N/A"
+            {{/if}}
+        </p>
+        <p>
+            Phone: 
+            {{  this.phoneNumber    }}
+        </p>
+        <p>
+            Email: {{   this.email }}
+        </p>
+        <p>
+            Max Population Density : {{ this.maxCapacity    }}
+        </p>
+    <form id="gym-update-{{this._id}}" class="gym-update-form" method="POST">
+      <button class="det-updatebtn" data-gym-id="{{this._id}}" >Update Gym Details</button>
+    </form>
+
+    </div>
+
+    {{/each}}
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/public/js/updateGym.js"></script>

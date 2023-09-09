@@ -1,0 +1,37 @@
+{{! This will be your default layout for all handlebars file rendered. This will be inherited by all other templates. }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/public/css/commonStyles.css">
+    
+</head>
+<body>
+    <header>
+        <img id="header_image" alt="Gym brat" src="/public/images/headerImage.jpg">
+        <div id="header_name">Gym Brat</div>
+    </header>
+    <div class="form-group hidden" id="error-container">
+        <div class="alert alert-danger text-goes-here"></div>
+    </div>
+    <main class="main">
+    {{{body}}}
+    </main>
+    <footer>@gymBrat....</footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
+    {{#if partial}}
+        {{> (lookup . 'partial') }}
+    {{/if}}
+
+    {{#if renew}}
+        {{> (lookup . 'renew') }}
+    {{/if}}
+    
+    
+</body>
+ 
+</html>

@@ -1,0 +1,89 @@
+
+    <br><br>
+    <a class="go_home_link" href="/user/protectedUserHomePage">Home</a><br>
+    <h1 class = "center textCenter">Update plan</h1><br>
+    <div class ="class-form class-update-form form-cont center">
+    <form id ="updatePlan-form" method="POST" action="/user/updateplan">
+        <label for="plan">Choose your Plan: </label>
+        <select name="plan" id="plan">
+            <option selected="selected" value="alpha">Alpha</option>
+            <option value="beta">Beta</option>
+            <option value="omega">Omega</option>
+            <option value="renew">Renew current plan</option>
+        </select>
+        <div class="form-group hidden" id="error-container15">
+            <div class="alert alert-danger text-goes-here"></div>
+        </div>
+        <br>
+        <label for="passwordInput">Password: </label>
+        <input id="passwordInput" type="password" name="passwordInput" />
+        <div class="form-group hidden" id="error-container16">
+            <div class="alert alert-danger text-goes-here"></div>
+        </div>
+        <br>
+        <input id="submit" class="clickbutton" type="submit" value="Update" />
+
+        {{#if error }}
+        <div class="form-group">
+            <div class="alert alert-danger">
+                <p>{{ error }} </p>
+            </div>
+        </div>
+        {{/if}}
+    </form>
+    </div>
+    <hr>
+    <a href="/user/membershipPlans">See Plan Details</a>
+
+    {{!-- <div id = "plans-container" > --}}
+        <p>Current plan details</p>
+        {{!-- <div class="plan"> --}}
+            {{#if alpha}}
+            <p>Alpha</p>
+            <ul>
+            <li>Monthly Dues $39.99</li>
+            <li>Monthly Dues $19.99</li>
+            <li>Annual $39.99</li>
+            <li>Unlimited Access to Home Club</li>
+            <li>PF App Workouts</li>
+            <li>Free Fitness Training</li>
+            <li>Free WiFi</li>
+            <li>Perks: Partner Rewards & Discounts</li>
+            </ul>
+            {{/if}}
+            {{#if beta}}
+            <p>Beta</p>
+            <ul>
+            <li>Monthly Dues $29.99</li>
+            <li>Annual $49.99</li>
+            <li>Unlimited Access to Home Club</li>
+            <li>PF App Workouts</li>
+            <li>Free Fitness Training</li>
+            <li>Free WiFi</li>
+            <li>Perks: Partner Rewards & Discounts</li>
+            <li>Bring a Guest Anytime</li>
+            <li>Use of Any Planet Fitness Worldwide</li>
+            <li>Use of Tanning</li>
+            </ul>
+            {{/if}}
+            {{#if omega}}
+            <p>Omega</p>
+            <ul>
+            <li>Monthly Dues $39.99</li>
+            <li>Annual $69.99</li>
+            <li>Unlimited Access to Home Club</li>
+            <li>PF App Workouts</li>
+            <li>Free Fitness Training</li>
+            <li>Free WiFi</li>
+            <li>Perks: Partner Rewards & Discounts</li>
+            <li>Bring a Guest Anytime</li>
+            <li>Use of Any Planet Fitness Worldwide</li>
+            <li>Use of Tanning</li>
+            <li>Use of Massage Chairs</li>
+            <li>50% Off Select Drinks</li>
+            <li>Premium Perks: Partner Rewards & Discounts</li>
+            </ul>
+            {{/if}}
+        {{!-- </div> --}}
+
+    {{!-- </div> --}}

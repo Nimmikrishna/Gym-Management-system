@@ -1,0 +1,38 @@
+<br><br><br>
+
+<div class="navigation">
+    <a class="classes_link" href="/class/classDetails">All classes</a><br>
+    <a class="go_home_link" href="/admin/adminHome">Home Page</a><br>
+</div>
+
+<div class = "classes">
+<h1>Create Event</h1>
+<div class = "form-cont"> 
+	<form id="classCreation" method="POST" class="classes-form" action="classCreation">
+		<label for="className">Class Name:</label>
+		<input type="text" id="className" name="className" placeholder="Name for Class" required></input><br><br>
+
+		<label for="date1">Date:</label>
+		<input type="date" id="date1" name="date" required></input><br><br>
+
+		<label for="timings1">Time:</label>
+		<input type="text" id="timings1" name="timings" placeholder="HH:MM - HH:MM" required></input><br><br>
+				
+		<label for="instructor">Instructor:</label>
+		<input type="text" id="instructor" name="instructor" placeholder="Name of Instructor" required></input><br><br>
+
+		<label for="description">Description:</label>
+		<input id="description" name="description" placeholder="Description of Class" required></input><br><br>
+
+		<label for="maxCapacity">Max Capacity:</label>
+		<input id="maxCapacity" name="maxCapacity" placeholder="0-200" required></input><br><br>
+
+		<input type="submit" value="addClass" class="clickbutton"></input>
+
+    <div class="form-group hidden" id="error-container">
+        <div class="alert alert-danger text-goes-here1"></div>
+    </div>
+	</form>
+</div>
+</div>
+	<script src="/public/js/classFormValidation.js"></script>
